@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ee">
+  <title>My album collection</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="albums.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <p class="eyebrow">A personal music library</p>
+      <h1>Albums I've saved<span>.</span></h1>
+      <p class="description">A little collection of records I've found along the way. Pick an order and explore.</p>
+    </header>
+    <section aria-labelledby="collection-title">
+      <div class="collection-heading">
+        <div><p class="eyebrow">The collection</p><h2 id="collection-title">On the shelf <span id="album-count"></span></h2></div>
+        <div class="sort-area" role="group" aria-label="Sort albums">
+          <span class="sort-label">Sort by</span>
+          <button type="button" data-sort="original" aria-pressed="true">Original order</button>
+          <button type="button" data-sort="title" aria-pressed="false">Title A–Z</button>
+          <button type="button" data-sort="artist" aria-pressed="false">Artist A–Z</button>
+          <button type="button" data-sort="added" aria-pressed="false">Recently saved</button>
+          <button type="button" data-sort="release" aria-pressed="false">Release date</button>
+        </div>
+      </div>
+      <div class="algorithm-note" aria-live="polite" id="sort-stats">Choose a sort to compare merge sort with selection sort.</div>
+      <div class="album-grid" id="album-grid"></div>
+    </section>
+    <footer>Made for Data Structures &amp; Algorithms · A snapshot of my Spotify library</footer>
+  </main>
+</body>
+</html>
